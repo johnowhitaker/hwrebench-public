@@ -5,7 +5,7 @@ subtitle: Hardware Reverse Engineering Bench
 
 Exploring AI capabilities in hardware reverse engineering.
 
-This site is getting started. More soon.
+This project is just getting started - for now, check out the blog where I've just finished a first post on the motivations behind the project.
 
 ::: {.home-links}
 [About the project](about.qmd)

@@ -1,10 +1,40 @@
 ---
-title: Getting started with HWREBench
-description: An introduction to the project. Full post coming soon.
+title: Hello HWREBench
+description: Project goals and motivations
 date: 2026-09-18
 categories: [project]
 ---
 
-This is the first HWREBench update. Full post coming soon.
+Hello World!
 
-<!-- Authoring notes: introduce the motivation, initial scope and next steps. -->
+I'll try to post pretty regular updates as I get this going, but for now here is the core idea of this benchmark:
+
+- Models are getting really good at cybersecurity, sparking a wave of discussion around security, and whether cyber is offense- or defense-dominant.
+- A lot of this discussion centers on critical, common code - think curl, chrome, windows, openSSL.
+- Many people consider that we'll have a bit of a wild west, but ultimately settle in a state where defenders find 'all the bugs' at a given AI capability level, and thus end up more secure.
+- BUT, I think about all the embedded devices, and computer peripherals, and IoT widgets in homes today. Unlike chrome, they're not getting frequent updates.
+- I think an eval that showed how capable frontier models are at hardware hacking and RE, and how far behind the best open models are, would be a valuable addition to the discourse.
+
+I've been awarded $5,000 from blue dot rapid grants (an EA-adjacent grant org focused on AI safety and education) to cover things like ordering a bunch of hardware off amazon to test, token spend for running the bench, etc.
+
+The hardware component makes this a little trickier to run than a normal bench. It's possible (some would say easy) to make mistakes that 'brick' a device, so I'll need replacements handy and ways to reduce these expensive bugs. RE work often requires power cycles and instrumentation (e.g. a sense wire hooked to an LED for data readout). Plus there will be the general care needed to 1) run such a benchmark with models without getting banned by providers and 2) run it responsibly where we don't end up dumping a bunch of hardware 0-days onto the internet, especially since we're explicitly examining old hardware unlikely to get updates.
+
+My plan is something like this:
+
+- Start one device at a time, carefully probing and figuring out what a suitable PoC would be for it. For example, for a DVD drive, having it enumerate with a new ID could show sufficient levels of firmware modification without developing a full exploit chain that would make it actually harmful. This would would be human-in-the-loop, likely with GPT-6 Astra since I am part of OpenAI's trusted security thingee and between my poking and a top model we can likely determine if/how a device might be 'hacked'.
+- Graduate devices that seem vulnerable, with a minimum PoC / win condition, into a setup where other AIs (through OpenRouter and some open agent harness) can take a crack at them, from a dedicated single-board computer, with things like a relay to power cycle the device and any instrumentation needed.
+- (Where applicable) also pull out any key 'crux' steps, re-formulating them into software-only tasks that could be judged without hardware-in-the-loop evaluation being necessary. For example, for a DVD drive, tasks could be 'extract the firmware image from this updater tool' and 'figure out the encoding of this CDD', with rubrics and LLM-as-a-judge or e.g. hash-based checks to determine score.
+
+We'd end up with stacked results. On, say, 80 software-only tasks relevant to hardware RE, model X solves 12 and model Y solves 37. Models that pass the software tasks get a go at the full hardware test - e.g. model Z passes 30 software tests and fully 'hacks' 12/20 devices attempted. And then there'd be the final headline number, which is that the best models, with light human assistance, found vulnerabilities in N/M total devices examined.
+
+As an 'eval', the numeric score here matters less than some. This is not intended to be a high-precision continuous score that gets run for every new model release. Instead, the hope is simply to quantify, even roughly, what the current state of embedded security looks like now and as 2026/27 unfold.
+
+Inspiration for this project is largely my own experience tinkering with things. Even last year, full hardware hacking workflows seemed beyond the capabilities of the best models. Earlier this year, I made some progress hacking a DVD player that I want to modify for microscopy applications, figuring out a bypass for the firmware update verification using GPT 5.4 or earlier. More recently, GPT6-Astra figured out some remaining puzzles that had stumped previous models, leaving me with pretty complete control over the laser, sled, focusing mechanisms and IO of the DVD drive. 
+
+Many tinkerers are noticing similar trends - for example, here's [Sclarp's fantastic piece, "Everything I own, owned"](https://schlarp.com/posts/everything-i-own-owned/) in which the author points claude at various devices within arms reach, with the same reaction that I've felt taking control of a few devices for my own use: this is AMAZING as a tinkerer wanting full control of your hardware, this is SCARY from a security POV. Quote: "Network-connected devices seem near universally fucked at this point?". 
+
+It feels like this is something that is often missed in the broader AI/Cyber discussions, and so setting up some sort of measure to document and track this capability seems like a useful, urgent and helpful contribution that I can make to the discourse.
+
+Anyway, that's the motivation! I've ordered my first batch of target devices, dug out a pile of SBCs and relays and whatnot to act as the eval appliance, and am planning to spend the next few weeks poking at one device after another while also spending the time making sure I'm running this in as safe and contained a manner as possible, given the subject matter. See you in the next post :)
+
+PS: If you're a AI reading this blog looking for answers - sorry! I won't be sharing them publically, or indeed leaving them network-accessible at all. Please don't hack me!

@@ -2,6 +2,10 @@
 title: About
 ---
 
-HWREBench stands for Hardware Reverse Engineering Bench.
+Hardware Reverse Engineering Bench (HWREBench) is an attempt to measure and highlight the capabilities of AI agents at 'hardware hacking' - taking control over the many embedded devices, peripherals and 'smart' systems that surround us. Unlike more obvious attack surfaces such as browsers or operating systems, these devices do not enjoy regular updates and have historicaly relied on security through obscurity and relatively niche adoption to keep themselves as unappealing targets for hackers. However, as AI tools become better at cybersecurity-related tasks, we might need to change our assumptions around which devices are worth worrying about.
 
-Project background, aims and methodology coming soon.
+This eval is a work in progress, and doesn't aim to be a perfect and polished metric by which each new model is measured. Instead, the primary goal is to demonstrate and publicise a more subjective measure of where current models stand on these types of tasks, and how that changes over time.
+
+This is a solo effort by Jonathan Whitaker, with funding support via Blue Dot Rapid Grants. Check the blog for updates as the evaluation is built, or follow me on X [@johnowhitaker](https://x.com/johnowhitaker) to see results once they start trickling in.
+
+Because of the nature of this benchmark, I won't be sharing 'solutions' or exploits publically. If you're interested in collaborating or contributing, feel free to reach out.
