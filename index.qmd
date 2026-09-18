@@ -1,0 +1,14 @@
+---
+title: HWREBench
+subtitle: Hardware Reverse Engineering Bench
+---
+
+Exploring AI capabilities in hardware reverse engineering.
+
+This site is getting started. More soon.
+
+::: {.home-links}
+[About the project](about.qmd)
+
+[Read the blog](blog.qmd)
+:::

@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - about.qmd
+    - blog.qmd
+    - posts/**/*.qmd
+  resources:
+    - CNAME
+    - .nojekyll
+
+website:
+  title: HWREBench
+  description: Hardware Reverse Engineering Bench
+  site-url: https://hwrebench.com
+  favicon: favicon.svg
+  navbar:
+    background: light
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: blog.qmd
+        text: Blog
+    right:
+      - icon: github
+        href: https://github.com/johnowhitaker/hwrebench-public
+        aria-label: Website source on GitHub
+  page-footer:
+    left: Hardware Reverse Engineering Bench
+    right:
+      - text: GitHub
+        href: https://github.com/johnowhitaker/hwrebench-public
+
+format:
+  html:
+    theme:
+      - cosmo
+      - theme.scss
+    toc: false
+    link-external-newwindow: true
+    lang: en
+
+execute:
+  freeze: auto

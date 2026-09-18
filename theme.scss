@@ -1,0 +1,49 @@
+/*-- scss:defaults --*/
+$body-bg: #fafbf9;
+$body-color: #243139;
+$primary: #16685f;
+$link-color: #16685f;
+$navbar-bg: #fafbf9;
+$navbar-fg: #243139;
+$font-family-sans-serif: system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-family-monospace: "SFMono-Regular", Consolas, monospace;
+$headings-font-weight: 650;
+
+/*-- scss:rules --*/
+.navbar {
+  border-bottom: 1px solid #dbe3de;
+  padding-block: 1rem;
+}
+
+.navbar-brand {
+  font-family: $font-family-monospace;
+  font-weight: 700;
+  letter-spacing: -.035em;
+}
+
+#quarto-content {
+  padding-top: 2rem;
+}
+
+h1.title {
+  letter-spacing: -.035em;
+}
+
+.subtitle {
+  color: #58706b;
+}
+
+.home-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+}
+
+.home-links p {
+  margin: 0;
+}
+
+.nav-footer {
+  border-top: 1px solid #dbe3de;
+}

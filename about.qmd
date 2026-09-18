@@ -1,0 +1,7 @@
+---
+title: About
+---
+
+HWREBench stands for Hardware Reverse Engineering Bench.
+
+Project background, aims and methodology coming soon.
