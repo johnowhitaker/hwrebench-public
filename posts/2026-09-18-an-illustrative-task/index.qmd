@@ -11,7 +11,7 @@ I have a UV 'sunscreen camera', which requires a custom android app to see the v
 
 This isn't a trivial task. The agent must inspect the APK, decompile bits of it, trace the flow of data between app and camera, and figure out the right bytes to send and the custom packet format that the camera uses to stream jpeg frames. So, let's step down the Artificial Analysis Intelligence Index and see how different models do.
 
-![AA intelligence index when this was written]("Artificial Analysis Intelligence Index (18 Sep '26).png")
+![AA intelligence index when this was written](aaindex.png)
 
 - 5.6 Sol in Codex did this for me without issue when I first got this camera, and built a nice mac app with camera preview and controls with equal ease.
 
