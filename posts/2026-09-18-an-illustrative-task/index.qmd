@@ -1,0 +1,36 @@
+---
+title: An Illustrative Task
+description: Building a Model Ladder to understand task difficulty
+date: 2026-09-18
+categories: [project]
+---
+
+As I wait for hardware to arrive, a first poke at a reverse engineering task gives a good intuition for how we might quickly get a feel for a task, without a fully automated test system in place.
+
+I have a UV 'sunscreen camera', which requires a custom android app to see the video feed. So, I plug it in to a linux machine, fire up a coding agent, and tell it something like "There is a 'UV suncreen camera' plugged into USB. The apk is in this directory. Reverse engineer the protocol and take a photo, then look at it and tell me how many fingers I'm holding up". 
+
+This isn't a trivial task. The agent must inspect the APK, decompile bits of it, trace the flow of data between app and camera, and figure out the right bytes to send and the custom packet format that the camera uses to stream jpeg frames. So, let's step down the Artificial Analysis Intelligence Index and see how different models do.
+
+![AA intelligence index when this was written]("Artificial Analysis Intelligence Index (18 Sep '26).png")
+
+- 5.6 Sol in Codex did this for me without issue when I first got this camera, and built a nice mac app with camera preview and controls with equal ease.
+
+- GLM 5.3 figures it out too, working it all out over the course of about 20 minutes. 4M tokens, $1.63.
+
+- DeepSeek V4 Flash 0731 got the job done quickly, for a cost of $0.08! About 10 minutes. It *did* try to find a hidden number on my hand rather than counting my two fingers, but I'll give it a pass :)
+
+- Qwen 3.8 27B worked for longer, required a few nudges to stay on track (e.g. it tried to use the webcam to see the answer, and then to download a package from pypi that was written to support this camera model). It figured out most of the pieces, but didn't quite get the correct byte sequences needed. Amusingly enough, this run cost $2.83, more than the 30X larger GLM 5.3. However, this is also the only model in this lineup that many people are able to run at home for ~free - as long as you are patient enough - it used 30M tokens before I stopped it.
+
+- GPT-OSS-120B completely failed.
+
+The overall picture is about what you'd expect: as you step down the intelligence ladder, the smartest models manage the task, intermediate ones struggle a little, and the lowest can't solve it. For this task, the sweet spot is DeepSeek v4 Flash, which perfectly solves the task at a fraction of the cost of the larger, 'smarter' models.
+
+So, for this task, we can say that:
+
+- It is easily solved by closed source frontier models
+- It is solved by open source frontier models, including more affordable ones
+- It is right on the threshold of being solvable by models people can run locally (I expect I could get it working with Qwen 3.8 27B with very little extra work)
+
+With the solution in hand, it won't be hard to package this up into a software-only task, with a model as the judge testing different agents on the apk RE piece... but my suspicion is that the above set of bullet points is most of the signal we'll want from each task in this bench.
+
+My plan as I build out the set of tasks is to follow roughly this approach: start with the top models, step down until I find the models can no longer solve it, see if there is a software-only piece I can extract into a test that can be run more broadly without hardware required, and then share the results. We'll see how this plan survives contact with reality via the next few test devices :)
