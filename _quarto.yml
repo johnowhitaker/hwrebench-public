@@ -5,6 +5,7 @@ project:
     - index.qmd
     - about.qmd
     - blog.qmd
+    - tasks.qmd
     - posts/**/*.qmd
   resources:
     - CNAME
