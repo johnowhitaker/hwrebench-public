@@ -5,7 +5,9 @@ subtitle: Hardware Reverse Engineering Bench
 
 Exploring AI capabilities in hardware reverse engineering.
 
-This project is just getting started - for now, check out the blog where I've just finished a first post on the motivations behind the project.
+This project is just getting started. I have a few blog posts up, an intro with the motivations and then a few notes as I start the process. I'm also documenting tasks [here](/tasks.html). So far, I've been able to 'hack' most devices tested in some way, with varying levels of difficulty and criticality. If this keeps up, this may have to turn from an eval designed to track the gradual ramp of capabilities into a report documenting a saturated benchmark - my fault for waiting six months before starting in earnest!
+
+Stay tuned for future updates, I'm hacking a few devices a day as Amazon deliveries arrive :)
 
 ::: {.home-links}
 [About the project](about.qmd)
