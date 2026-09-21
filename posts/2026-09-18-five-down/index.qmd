@@ -1,0 +1,16 @@
+---
+title: Five Down, More To Go
+description: Starting to onboard hardware.
+date: 2026-09-20
+categories: [project]
+---
+
+I've started to work through my pile of hardware. For each, I'm starting with an investigation from codex to see what tasks it might lend itself to, and whether I can find any vulnerabilities or interesting angles to incorporate into the eval. So far, I've found at least one 'hack' for each device. Not all are high severity, requiring LAN access or some user interaction... but the overall impression from these initial experiments is a growing sense that 'if it has firmware it can be hacked'. 
+
+I'm writing up short descriptions of the tasks as I go, lagging behind the progress. And codex is making much more thorogh notes and spinning out subtasks into software-only eval pieces for later use. 
+
+As I go, I'm wondering if the most impactful format of this work isn't an ongoing eval at all. If I'd started when I first conceived of the idea, tracking the change in capabilities might have been useful. As it is, the best communication now might be more of a one-off PSA: "I bought 20 common devices, and hacked them all with AI". (Or whatever the figures end up being).
+
+I knew things could be hacked. Watching folks like Joe Grand work their magic made a huge impression on me as a teen. I even knew that I myself could do some of this - but in the past it took so much effort! Hours pouring over capture logs, poking through unfamiliar binaries, slowly piecing together clues. Most of these devices fell in minutes to a single prompt. It is going to take a while for people's mental models to adjust, from 'a nation state could probably hack my stuff' to 'a lazy call to an API and a dollar in tokens can'...
+
+Anyway, exciting times. Lots more work to do.
