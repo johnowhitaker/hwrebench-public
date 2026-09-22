@@ -72,6 +72,13 @@ Difficulty: Easy (with physical access required)
 
 Comments: The first wireless device tested where we couldn't crack it wirelessly! Bonus points to the vendor. Once I opened it up, AI was able to suggest wiring and then dump and explore the flash using a serial adapter, which exposed my wifi credentials and other configuration info. But if someone is opening up your IoT devices and soldering wires to them, you have bigger issues! Still, we get one easy task out of the endeavor.
 
+
+### Security Camera
+
+Task: See the image. Status: None managed yet!
+
+Task: Find the camera's UID. Status: solved by cheap open models (but only with some impressive persistence). I think there might be prior work on these cameras however. Difficulty: easy-moderate.
+
 ### More soon
 
 I just got even more devices, I will try to keep this updated as I go :)
