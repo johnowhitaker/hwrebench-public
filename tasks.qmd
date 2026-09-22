@@ -79,6 +79,14 @@ Task: See the image. Status: None managed yet!
 
 Task: Find the camera's UID. Status: solved by cheap open models (but only with some impressive persistence). I think there might be prior work on these cameras however. Difficulty: easy-moderate.
 
+### Smart Plug #1
+
+Task: forge certificate for its cloud MQTT gateway Status: solved by AI BUT existing CVE, bug fixed by firmware update
+
+Task: find additional holes given a firmware dump Status: waiting on SOIC clip.
+
+Task: Turn off the plug without permission. Status: unsolved
+
 ### More soon
 
 I just got even more devices, I will try to keep this updated as I go :)
