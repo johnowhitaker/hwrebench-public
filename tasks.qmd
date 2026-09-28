@@ -113,9 +113,11 @@ Figure out the SUB serial port/protocol: not yet (WIP)
 
 Task: Find the camera and capture a frame. Solved by cheap model. (Despite device password etc)
 
-Tasks: Control the pan and tilt. Code execution on device. TODO.
+Tasks: Control the pan and tilt and laser. Solved by cheap model.
 
-Comments: Some promising bits of security but some gaps. Given this is a device that can aim at something and turn on its laser (!) this is a little worrying, to say the least haha.
+Tasks: Code Execution on the device. Not solved / TODO
+
+Comments: Some promising bits of security but some gaps the model was able to squeeze through. Given this is a device that can aim at something and turn on its laser (!) this is a little worrying, to say the least haha.
 
 ### More soon
 
