@@ -1,0 +1,14 @@
+---
+title: Cameras With Fricken Lasers
+description: Contunuing to Onboard Devices
+date: 2026-10-01
+categories: [project]
+---
+
+Working on the devices that have some more physical activities as options is always a somewhat surreal experience. For example, this week I looked away from the running test to join a video call, and as I did so the model finally figured out a way past the authentication on a pet camera equipped with pan, tilt and a laser. It dutifully turned on the laser and set it in motion, sweeping towards me like a scene from a sci-fi movie. I'd positioned myself out of range, and the AI was doing just what it was told. Still - having some 'entity' in my computer beavering away and then causing action in the physical world is a trip!
+
+I've got about 5 devices left in my 'to hack' pile, and about 5 days until I return to the world of the employed. So, after I publish this blog, I think I'm going to start work on the main 'story' post for the homepage, sharing the overall trajectory to date, capturing the current state of things as I see them based on this exploration.
+
+I've also had a request for collaboration - perhaps the best way to enable this is to open the blog here to guest authors? If so, I should write a 'collaborating.md' or something with best practices - keep an eye out for that too.
+
+Anyway, gotta go - DeepSeek is requesting I try a manual watering cycle on a smart plant watering thingee so it can try to figure out how to control it ¯\_(ツ)_/¯

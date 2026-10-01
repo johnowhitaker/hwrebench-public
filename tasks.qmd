@@ -125,7 +125,15 @@ Task: Display arbitrary artwork, play audio, SSRF to fetch arbitrary URLs. Solve
 
 Task: Find one (of several) heap buffer overflows and trigger a crash. Solved by cheap open model.
 
-Comments: This one had pretty low security in general. An updated firmware added some small bandaids but still left plenty of holes.
+Comments: This one had pretty low security in general. An updated firmware added some small bandaids but still left plenty of holes. And these models are apparently good at Ghidra!
+
+### Smart Watering System
+
+Task: Trigger a watering cycle. Not solved. (This ESP-based device is pretty well set up, and only talks to the cloud - and hacking the cloud is out of scope).
+
+Task: Dump the flash using a 'bus pirate 5' tool connected to the internal circuit board. Solved by cheap model (required human hardware help of course).
+
+Comments: A well-built little plant watering bot! Easily accessible internal debug pins allow dumping the flash and re-programming the device, which is good news for hardware hackers wanting to play with a wifi-enabled peristaltic pump. Maybe also good news for someone wanting to do a supply chain attack, but if that's your threat level you're in trouble either way. This one goes in the bucket of strongly better for having fun with our own devices vs being a serious threat.
 
 ### More soon
 
