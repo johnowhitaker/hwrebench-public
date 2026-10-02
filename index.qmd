@@ -3,14 +3,38 @@ title: HWREBench
 subtitle: Hardware Reverse Engineering Bench
 ---
 
-Exploring AI capabilities in hardware reverse engineering.
+I bought a bunch of 'smart' devices on Amazon. I was able to hack most of them with AI. Let's talk about that!
 
-This project is just getting started. I have a few blog posts up, an intro with the motivations and then a few notes as I start the process. I'm also documenting tasks [here](/tasks.html). So far, I've been able to 'hack' most devices tested in some way, with varying levels of difficulty and criticality. If this keeps up, this may have to turn from an eval designed to track the gradual ramp of capabilities into a report documenting a saturated benchmark - my fault for waiting six months before starting in earnest!
+AI <-> Cyber discourse has tended to focus on the rise in high-profile and high-severity exploits in critical software such as cURL, Linux, or Chrome. Rightly so - these pieces of vital infrastructure touch the digital lives of most internet users, making security flaws a really big deal. The folks behind the most advanced AI models are trying to make their top capabilities available to defenders first, hoping to shore up 'all the bugs' and fix issues before bad actors gain access to equivalent models to find the holes. The hope: eventually we'll fix up most of the bugs, and be left with vastly more secure software (albeit with a tumultuous transition period in the meantime).
 
-Stay tuned for future updates, I'm hacking a few devices a day as Amazon deliveries arrive :)
+![A chart from Epoch AI tracking the rise of CVEs (https://epoch.ai/data/cve)](images/cve-explorer.png)
+
+Unfortunately, not all software is made by the handful of organizations with 'trusted access' to the best defence. You are surrounded by software - not just the apps on your computer, but the firmware on your printer, CD player, thermostat and smart fridge and the many layers of hidden software that make your wifi work and your smart watch buzz. Many of these devices rarely receive updates, and have historically relied on relative obscurity for security. How does AI change the equation here? Can today's AI agents worm their way into these hidden computers around us, and bend them to some nefarious purpose? Turns out, the answer is usually **yes**.
+
+## A Motivating Example: DVD Drive Hacking.
+
+TODO.
+
+## A Benchmark is Born
+
+TODO. 
+
+## Lessons So Far
+
+TODO. 
+
+## Is This Bad?
+
+TODO
+
+## What Next?
+
+TODO.
 
 ::: {.home-links}
 [About the project](about.qmd)
 
 [Read the blog](blog.qmd)
+
+[Contribute](contributing.qmd)
 :::

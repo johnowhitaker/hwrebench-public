@@ -1,0 +1,25 @@
+---
+title: Contributing
+---
+
+Have you got devices of your own you'd like to include? Good news! HWREBench is now accepting guest posts for the [blog](blog.qmd). These are a mechanism by which you (yes YOU) can contribute. Here's the rough process:
+
+- Pick a device. This could be something you already own - just keep in mind that hardware RE often comes with a risk of bricking the device being tested, so don't use anything you can't replace.
+- Pick a target task. For example, for a webcam this could be something like "record a video clip without the indicator light tunring on". Something with a measurable outcome, that isn't just the device operating as designed.
+- Set you coding agent going. Explain the task, desired outcome, and optional context. Make sure to specify what is out of scope (see below). 
+- **IMPORTANT:** Monitor it as it works to make sure that it doesn't go off the rails.
+- If successful, ask it to summarize what it did and how.
+- Based on this, write (yourself, AI writing discouraged) an account of the experiment. 
+- (Optional extra) If there were clear software-only steps that could be turned into an offline test for the key capabilities, consider wrapping them up as a task and sharing them with me. (details below).
+- Make a PR to the site's [github](https://github.com/johnowhitaker/hwrebench-public) with your post addition, or contact [me](https://x.com/johnowhitaker) for feedback on a draft.
+
+The goal here is to build a picture of what today's models can accomplish. So, tasks that are *on the edge* of possible are of particular interest. For example, perhaps you find something that the latest closed models can do, but which seems to be beyond the capabilities of open source models. If you're able to try a few different model tiers, you're providing a richer signal than a simple 'claude hacked my webcam' post - but both are still great.
+
+Some important things to keep in mind:
+
+- THIS IS NOT AN EXCUSE TO DO CYBERCRIME! Don't hack some IoT maker's servers or steal account data or anything else illegal. "I did it for an eval" is not a plea that will get you out of trouble. "My agent did it" is not a plea that will get you out of trouble.
+- Stick to local work on devices that you own.
+- Be responsible about disclosure. We want the blog posts to convey the difficulty and severity of the task, but this doesn't mean we should be publishing security flaws that could affect people.
+- Keep an eye on your agents. Especially if explicitly prompted to do RE work, agents can get a little carried away. I find it is vital to keep an eye on what they're doing, looking out for warning signs that they've decided to hack your router, go after online services, or otherwise enguage in behaviour outside the scope of the eval. Stop them as soon as you see something suspicious - we don't want a situation like OpenAI's with agents running amok for hours or days ;)
+
+I'd love input if you have thoughts on how best to continue this work. I look forward to guest blogs. Let's discover together :)
