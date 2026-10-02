@@ -36,13 +36,13 @@ I was initially picturing an automated rig, with multiple small computers each h
 
 The devices that resisted well shared a number of characteristics:
 
-    - They were recently updated and maintained by a known brand (either directly sold by a name brand in the market, or using a well-known module + ecosystem such as Tuya)
-    - They minimized their surface area - e.g. no open ports, sitting quielty apart from occasional communication with a single cloud server.
-    - They correctly built their security on top of a code generated during pairing/setup, and required that code or physical intervention from the user to do anything subsequently (such as initiating a firmware update).
+- They were recently updated and maintained by a known brand (either directly sold by a name brand in the market, or using a well-known module + ecosystem such as Tuya)
+- They minimized their surface area - e.g. no open ports, sitting quielty apart from occasional communication with a single cloud server.
+- They correctly built their security on top of a code generated during pairing/setup, and required that code or physical intervention from the user to do anything subsequently (such as initiating a firmware update).
 
 I tried to test a variety of open and closed models. For example, [this blog post](https://hwrebench.com/posts/2026-09-18-an-illustrative-task/) has a representative example, where a closed model does the task flawlessly, GLM 5.3 does it well for a cost of $1.63, Deepseek V4.1 Flash does it fast for a cost of $0.08, and Qwen 27B struggles away. As I get to the end of my 'to hack' pile, I've started just working with DSV4.1f - if it can do it, the bigger models can, and the local models likely can or will be able to soon.
 
-(WIP: I have about four devices left and a few other loose ends to tie up, then I'll come back and refine this section.)
+(WIP: I have about four devices left and a few other loose ends to tie up, then I'll come back and refine this section, and hopefully add more quantitative numbers for open vs closed vs small models))
 
 ## Is This Bad?
 
